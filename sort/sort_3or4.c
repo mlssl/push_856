@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_3or4.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathildelaussel <mathildelaussel@studen    +#+  +:+       +#+        */
+/*   By: mlaussel <mlaussel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 13:55:51 by mlaussel          #+#    #+#             */
-/*   Updated: 2025/01/27 15:53:27 by mathildelau      ###   ########.fr       */
+/*   Updated: 2025/01/28 15:47:53 by mlaussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ static void	ft_index0or1(int **tab, int *size_a, int *size_b, int index)
 	if (index == 0)
 	{
 		pb(tab, size_a, size_b);
-		ft_sort_3(tab, *size_a); //, *size_b
+		ft_sort_3(tab, *size_a);
 		pa(tab, size_a, size_b);
 	}
 	else if (index == 1)
 	{
-		sa(tab, *size_a); //, size_b
+		sa(tab, *size_a);
 		pb(tab, size_a, size_b);
-		ft_sort_3(tab, *size_a); //, *size_b
+		ft_sort_3(tab, *size_a);
 		pa(tab, size_a, size_b);
 	}
 }
@@ -33,17 +33,17 @@ static void	ft_index2or3(int **tab, int *size_a, int *size_b, int index)
 {
 	if (index == 2)
 	{
-		ra(tab, *size_a); //, size_b
-		ra(tab, *size_a); //, size_b
+		ra(tab, *size_a);
+		ra(tab, *size_a);
 		pb(tab, size_a, size_b);
-		ft_sort_3(tab, *size_a); //, *size_b
+		ft_sort_3(tab, *size_a);
 		pa(tab, size_a, size_b);
 	}
 	else if (index == 3)
 	{
-		rra(tab, *size_a); //, size_b
+		rra(tab, *size_a);
 		pb(tab, size_a, size_b);
-		ft_sort_3(tab, *size_a); //, *size_b
+		ft_sort_3(tab, *size_a);
 		pa(tab, size_a, size_b);
 	}
 }
@@ -74,16 +74,13 @@ void	ft_sort_4(int **tab, int *size_a, int *size_b)
 			ft_index2or3(tab, size_a, size_b, index);
 	}
 }
-/*Tant que le plus petit n'est pas en premiere position
-Tant que le plus grand n'est pas en derniere position
-Si le permier et le deuxieme ne sont pas a la bonne place, on bouge*/
 
-void	ft_sort_3(int **tab, int size_a) //, int size_b
+void	ft_sort_3(int **tab, int size_a)
 {
 	while (tab[0][0] > tab[2][0])
-		ra(tab, size_a); //, size_b
+		ra(tab, size_a);
 	while (tab[1][0] > tab[2][0])
-		rra(tab, size_a); //, size_b
+		rra(tab, size_a);
 	if (tab[0][0] > tab[1][0])
-		sa(tab, size_a); //, size_b
+		sa(tab, size_a);
 }

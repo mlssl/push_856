@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathildelaussel <mathildelaussel@studen    +#+  +:+       +#+        */
+/*   By: mlaussel <mlaussel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 12:00:51 by mlaussel          #+#    #+#             */
-/*   Updated: 2025/01/27 15:53:27 by mathildelau      ###   ########.fr       */
+/*   Updated: 2025/01/28 15:39:35 by mlaussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	pa(int	**tab, int *size_a, int *size_b)
 	int	i;
 
 	i = *size_a;
-
 	if (*size_b > 0)
 	{
 		write(1, "pa\n", 3);
@@ -36,7 +35,6 @@ void	pa(int	**tab, int *size_a, int *size_b)
 		}
 	}
 	(*size_b)--;
-
 }
 
 void	pb(int	**tab, int *size_a, int *size_b)

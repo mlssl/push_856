@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   reverse.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathildelaussel <mathildelaussel@studen    +#+  +:+       +#+        */
+/*   By: mlaussel <mlaussel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:38:42 by mlaussel          #+#    #+#             */
-/*   Updated: 2025/01/27 15:53:27 by mathildelau      ###   ########.fr       */
+/*   Updated: 2025/01/28 15:40:03 by mlaussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	rra(int **tab, int size_a) //, int size_b
+void	rra(int **tab, int size_a)
 {
 	int	buffer;
 	int	i;
@@ -26,10 +26,9 @@ void	rra(int **tab, int size_a) //, int size_b
 		i--;
 	}
 	tab[0][0] = buffer;
-	//affiche_tab(tab, size_a, size_b);
 }
 
-void	rrb(int **tab,  int size_b) //int size_a,
+void	rrb(int **tab, int size_b)
 {
 	int	buffer;
 	int	i;
@@ -40,16 +39,14 @@ void	rrb(int **tab,  int size_b) //int size_a,
 	while (i > 0)
 	{
 		tab[i][1] = tab[i - 1][1];
-		i --;
+		i--;
 	}
 	tab[0][1] = buffer;
-	//affiche_tab(tab, size_a, size_b);
 }
 
 void	rrr(int **tab, int size_a, int size_b)
 {
 	write(1, "rrr\n", 4);
-	rra(tab, size_a); //, size_b
-	rrb(tab, size_b); //size_a,
-	//affiche_tab(tab, size_a, size_b);
+	rra(tab, size_a);
+	rrb(tab, size_b);
 }

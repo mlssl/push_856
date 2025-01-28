@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathildelaussel <mathildelaussel@studen    +#+  +:+       +#+        */
+/*   By: mlaussel <mlaussel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:38:34 by mlaussel          #+#    #+#             */
-/*   Updated: 2025/01/27 17:42:30 by mathildelau      ###   ########.fr       */
+/*   Updated: 2025/01/28 15:40:24 by mlaussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ra(int **tab, int size_a)
 	int	i;
 
 	if (size_a <= 1)
-		return;
+		return ;
 	write(1, "ra\n", 3);
 	buffer = tab[0][0];
 	i = 0;
@@ -36,7 +36,7 @@ void	rb(int **tab, int size_b)
 	int	i;
 
 	if (size_b <= 1)
-		return;
+		return ;
 	write(1, "rb\n", 3);
 	buffer = tab[0][1];
 	i = 0;

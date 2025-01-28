@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   atol.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathildelaussel <mathildelaussel@studen    +#+  +:+       +#+        */
+/*   By: mlaussel <mlaussel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 14:08:09 by mathildelau       #+#    #+#             */
-/*   Updated: 2025/01/27 15:53:39 by mathildelau      ###   ########.fr       */
+/*   Updated: 2025/01/28 15:42:43 by mlaussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	ft_isspace(int c)
 {
-	return (c == '\t' || c == '\n' || c == '\v'
-			|| c == '\f' || c == '\r' || c == ' ');
+	return (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'
+		|| c == ' ');
 }
 
 static int	ft_isdigit(int c)

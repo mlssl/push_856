@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathildelaussel <mathildelaussel@studen    +#+  +:+       +#+        */
+/*   By: mlaussel <mlaussel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 11:12:37 by mlaussel          #+#    #+#             */
-/*   Updated: 2025/01/27 17:18:02 by mathildelau      ###   ########.fr       */
+/*   Updated: 2025/01/28 16:08:28 by mlaussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ static int	**init_tab(int **tab, char **argv, int argc, int i)
 			tab[j][0] = ft_atoi(argv[i]);
 			i++;
 			j++;
-
 		}
 	}
 	return (tab);
@@ -74,7 +73,7 @@ static void	choice_sort(int **tab, int size_a, int size_b, int argc)
 		radix_binary(tab, &size_a, &size_b);
 }
 
-/*PENSER A METTRE LA SORTIE ERREUR SUR -1 
+/*PENSER A METTRE LA SORTIE ERREUR SUR -1
 + REVERIFIER SI DEMANDER DANS LE SUJET*/
 int	main(int argc, char **argv)
 {
@@ -93,7 +92,7 @@ int	main(int argc, char **argv)
 	}
 	size_a = argc;
 	size_b = 0;
-	if (ft_check_char_error(argv, argc) == -1 || ft_check_int_min_max(argv, argc) == -1)
+	if (ft_check_char_error(argv, argc) == -1 || ft_check_int(argv) == -1)
 		return (write(1, "Error\n", 6));
 	tab = malloc_tab(argc);
 	if (argc > 1)

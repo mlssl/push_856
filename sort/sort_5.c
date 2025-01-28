@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_5.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mathildelaussel <mathildelaussel@studen    +#+  +:+       +#+        */
+/*   By: mlaussel <mlaussel@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 10:06:05 by mlaussel          #+#    #+#             */
-/*   Updated: 2025/01/27 15:53:27 by mathildelau      ###   ########.fr       */
+/*   Updated: 2025/01/28 15:48:30 by mlaussel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ static void	ft_search_min(int **tab, int size_a, int *min1, int *min2)
 	}
 }
 
-static void	ft_step1(int **tab, int size_b) //, int size_a
+static void	ft_step1(int **tab, int size_b)
 {
 	if (size_b > 1 && tab[0][1] < tab[1][1])
-		sb(tab, size_b); // size_a,
+		sb(tab, size_b);
 }
 
 static void	ft_step2(int **tab, int size_a, int size_b)
@@ -66,10 +66,10 @@ void	ft_sort_5(int **tab, int *size_a, int *size_b)
 		if (tab[0][0] == min1 || tab[0][0] == min2)
 			pb(tab, size_a, size_b);
 		else
-			ra(tab, *size_a); //, *size_b
+			ra(tab, *size_a);
 		i++;
 	}
-	ft_sort_3(tab, *size_a); //, *size_b
-	ft_step1(tab, *size_b); //, *size_a,
+	ft_sort_3(tab, *size_a);
+	ft_step1(tab, *size_b);
 	ft_step2(tab, *size_a, *size_b);
 }
